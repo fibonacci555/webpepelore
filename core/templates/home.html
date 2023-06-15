@@ -1,0 +1,759 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto - PEPELORE</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo/logo.ico'%}">
+    <link rel="icon" src="{% static 'images/logo/logo.ico'%}">
+    
+   
+    
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    
+</head>
+<body>
+  <button onclick="topFunction()" id="topButton" title="Go to top">Top</button>
+
+    <nav style=" top: 0; display: block; z-index: 3;">
+        
+      <label id="#hamburguer" >
+        <input type="checkbox" id="check">
+        <span class="menu"> <span class="hamburger"></span> </span>
+        <ul>
+          <li><h1>PEPE LORE</h1></li>
+            <li><a  class="hm-nav-item" href="#">HOME</a></li>
+            <li><a  class="hm-nav-item" id="about-button" >ABOUT</a></li>
+            <li><a  class="hm-nav-item" id="howtobuy-button">HOW TO BUY</a></li>
+            <li><a  class="hm-nav-item" id="tokenomics-button">TOKENOMICS</a></li>
+            <li><a  class="hm-nav-item" id="roadmap-button">ROADMAP</a></li>
+            <li><button class="button">
+              <span class="button__text">
+                <span>B</span><span>U</span>Y</span><span> </span><span>N</span><span>O</span><span>W</span>
+              </span>
+              <svg class="button__svg" role="presentational" viewBox="0 0 600 600">
+                <defs>
+                  <clipPath id="myClip">
+                    <rect x="0" y="0" width="100%" height="50%" />
+                  </clipPath>
+                </defs>
+                <g clip-path="url(#myClip)">
+                  <g id="money">
+                    <path d="M441.9,116.54h-162c-4.66,0-8.49,4.34-8.62,9.83l.85,278.17,178.37,2V126.37C450.38,120.89,446.56,116.52,441.9,116.54Z" fill="#699e64" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                    <path d="M424.73,165.49c-10-2.53-17.38-12-17.68-24H316.44c-.09,11.58-7,21.53-16.62,23.94-3.24.92-5.54,4.29-5.62,8.21V376.54H430.1V173.71C430.15,169.83,427.93,166.43,424.73,165.49Z" fill="#699e64" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                  </g>
+                  <g id="creditcard">
+                    <path d="M372.12,181.59H210.9c-4.64,0-8.45,4.34-8.58,9.83l.85,278.17,177.49,2V191.42C380.55,185.94,376.75,181.57,372.12,181.59Z" fill="#d42f3a" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                    <path d="M347.55,261.85H332.22c-3.73,0-6.76-3.58-6.76-8v-35.2c0-4.42,3-8,6.76-8h15.33c3.73,0,6.76,3.58,6.76,8v35.2C354.31,258.27,351.28,261.85,347.55,261.85Z" fill="#ffdc67" />
+                    <path d="M249.73,183.76h28.85v274.8H249.73Z" fill="#323c44" />
+                  </g>
+                </g>
+                <g id="wallet">
+                  <path d="M478,288.23h-337A28.93,28.93,0,0,0,112,317.14V546.2a29,29,0,0,0,28.94,28.95H478a29,29,0,0,0,28.95-28.94h0v-229A29,29,0,0,0,478,288.23Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                  <path d="M512.83,382.71H416.71a28.93,28.93,0,0,0-28.95,28.94h0V467.8a29,29,0,0,0,28.95,28.95h96.12a19.31,19.31,0,0,0,19.3-19.3V402a19.3,19.3,0,0,0-19.3-19.3Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                  <path d="M451.46,435.79v7.88a14.48,14.48,0,1,1-29,0v-7.9a14.48,14.48,0,0,1,29,0Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                  <path d="M147.87,541.93V320.84c-.05-13.2,8.25-21.51,21.62-24.27a42.71,42.71,0,0,1,7.14-1.32l-29.36-.63a67.77,67.77,0,0,0-9.13.45c-13.37,2.75-20.32,12.57-20.27,25.77l.38,221.24c-1.57,15.44,8.15,27.08,25.34,26.1l33-.19c-15.9,0-28.78-10.58-28.76-25.93Z" fill="#7b8f91" />
+                  <path d="M148.16,343.22a6,6,0,0,0-6,6v92a6,6,0,0,0,12,0v-92A6,6,0,0,0,148.16,343.22Z" fill="#323c44" />
+                </g>
+            
+              </svg>
+            </button></li>
+        </ul>
+      </label>
+
+        
+        <ul id="menu">
+
+            <li><h1>PEPE LORE</h1></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#about" id="about-button">ABOUT</a></li>
+            <li><a href="#divider-howtobuy" id="howtobuy-button">HOW TO BUY</a></li>
+            <li><a href="#divider-tokenomics" id="tokenomics-button">TOKENOMICS</a></li>
+            <li><a href="#divider-roadmap" id="roadmap-button">ROADMAP</a></li>
+            <li><button class="button">
+                <span class="button__text">
+                  <span>B</span><span>U</span>Y</span><span> </span><span>N</span><span>O</span><span>W</span>
+                </span>
+                <svg class="button__svg" role="presentational" viewBox="0 0 600 600">
+                  <defs>
+                    <clipPath id="myClip">
+                      <rect x="0" y="0" width="100%" height="50%" />
+                    </clipPath>
+                  </defs>
+                  <g clip-path="url(#myClip)">
+                    <g id="money">
+                      <path d="M441.9,116.54h-162c-4.66,0-8.49,4.34-8.62,9.83l.85,278.17,178.37,2V126.37C450.38,120.89,446.56,116.52,441.9,116.54Z" fill="#699e64" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                      <path d="M424.73,165.49c-10-2.53-17.38-12-17.68-24H316.44c-.09,11.58-7,21.53-16.62,23.94-3.24.92-5.54,4.29-5.62,8.21V376.54H430.1V173.71C430.15,169.83,427.93,166.43,424.73,165.49Z" fill="#699e64" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                    </g>
+                    <g id="creditcard">
+                      <path d="M372.12,181.59H210.9c-4.64,0-8.45,4.34-8.58,9.83l.85,278.17,177.49,2V191.42C380.55,185.94,376.75,181.57,372.12,181.59Z" fill="#d42f3a" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                      <path d="M347.55,261.85H332.22c-3.73,0-6.76-3.58-6.76-8v-35.2c0-4.42,3-8,6.76-8h15.33c3.73,0,6.76,3.58,6.76,8v35.2C354.31,258.27,351.28,261.85,347.55,261.85Z" fill="#ffdc67" />
+                      <path d="M249.73,183.76h28.85v274.8H249.73Z" fill="#323c44" />
+                    </g>
+                  </g>
+                  <g id="wallet">
+                    <path d="M478,288.23h-337A28.93,28.93,0,0,0,112,317.14V546.2a29,29,0,0,0,28.94,28.95H478a29,29,0,0,0,28.95-28.94h0v-229A29,29,0,0,0,478,288.23Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                    <path d="M512.83,382.71H416.71a28.93,28.93,0,0,0-28.95,28.94h0V467.8a29,29,0,0,0,28.95,28.95h96.12a19.31,19.31,0,0,0,19.3-19.3V402a19.3,19.3,0,0,0-19.3-19.3Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                    <path d="M451.46,435.79v7.88a14.48,14.48,0,1,1-29,0v-7.9a14.48,14.48,0,0,1,29,0Z" fill="#a4bdc1" stroke="#323c44" stroke-miterlimit="10" stroke-width="14" />
+                    <path d="M147.87,541.93V320.84c-.05-13.2,8.25-21.51,21.62-24.27a42.71,42.71,0,0,1,7.14-1.32l-29.36-.63a67.77,67.77,0,0,0-9.13.45c-13.37,2.75-20.32,12.57-20.27,25.77l.38,221.24c-1.57,15.44,8.15,27.08,25.34,26.1l33-.19c-15.9,0-28.78-10.58-28.76-25.93Z" fill="#7b8f91" />
+                    <path d="M148.16,343.22a6,6,0,0,0-6,6v92a6,6,0,0,0,12,0v-92A6,6,0,0,0,148.16,343.22Z" fill="#323c44" />
+                  </g>
+              
+                </svg>
+              </button></li>
+          </ul>
+    </nav>
+    <style>
+        
+
+        .scroll-down {
+            opacity: 1;
+            -webkit-transition: all .5s ease-in 3s;
+            transition: all .5s ease-in 3s;
+            }
+
+            .scroll-down {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            margin-left: -16px;
+            display: block;
+            width: 32px;
+            height: 32px;
+            border: 2px solid #FFF;
+            background-size: 14px auto;
+            border-radius: 50%;
+            z-index: 2;
+            -webkit-animation: bounce 2s infinite 2s;
+            animation: bounce 2s infinite 2s;
+            -webkit-transition: all .2s ease-in;
+            transition: all .2s ease-in;
+            }
+
+            .scroll-down:before {
+                position: absolute;
+                top: calc(50% - 9px);
+                left: calc(50% - 7px);
+                transform: rotate(-45deg);
+                display: block;
+                width: 12px;
+                height: 12px;
+                content: "";
+                border: 2px solid white;
+                border-width: 0px 0 2px 2px;
+            }
+
+            @keyframes bounce {
+            0%,
+            100%,
+            20%,
+            50%,
+            80% {
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                transform: translateY(0);
+            }
+            40% {
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                transform: translateY(-10px);
+            }
+            60% {
+                -webkit-transform: translateY(-5px);
+                -ms-transform: translateY(-5px);
+                transform: translateY(-5px);
+            }
+}
+
+    </style>
+    <section id="scroll" href="#about" >
+        
+        <a href="#" class="scroll-down" address="true"></a>
+        </section>
+        </section>
+
+    <section id="index" style=" height: 100vh; margin: 0; left: 0; right: 0; padding: 0; top: 0; position:static;">
+        <button class="button-sound" id="play" style="position: fixed; bottom: 0; left: 0; z-index: 4; margin: 5% 5%;">
+            <svg style="cursor:pointer" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>         </button>
+        <audio id="myAudio" controls style="position: fixed; bottom: 0; left: 0; display: none;" autoplay>
+            <source src="{% static 'song/pepe.mp3'%}" type="audio/mpeg" >
+            Your browser does not support the audio element.
+        </audio>
+        
+    </section>
+
+    <div class="divider" id="divider-about" style="box-shadow: rgba(255, 255, 255, 1) 0px -5px 40px 20px; outline: none;">
+        <hr style="border: none;">
+        
+      </div>
+
+      <section id="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="image-container">
+              <img src="{% static 'images/logo.png'%}" alt="About Image">
+            </div>
+            <div class="text-container">
+              <h1>About</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus turpis et diam euismod consectetur. Sed ac sapien vel mi tincidunt tempus. Vestibulum eget nisi et est aliquet rhoncus a eget felis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur odio, cumque quisquam officia, animi ratione numquam deserunt tempore incidunt delectus dolorem quidem perspiciatis illum ullam iste, assumenda expedita nemo!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <div class="divider" id="divider-howtobuy"style="box-shadow: rgba(255, 255, 255, 1) 0px 0px 0px 20px; outline: none;">
+        <hr style="border: none;">
+        <img src="{% static 'images/logo_pequeno.png' %}" alt="Logo" class="logo">
+      </div>
+
+
+      <section id="how-to-buy" style="margin: 7%;">
+        <h1>How To Buy</h1>
+        <div class="card-container">
+          <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tenetur odit qui itaque tempora neque ex quasi ipsa. Atque omnis a maiores perspiciatis non ipsa iure itaque praesentium, voluptate soluta.</p>
+            <img src="{% static 'images/bitcoin-wallet.png'%}" alt="">
+        </div>
+          <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tenetur odit qui itaque tempora neque ex quasi ipsa. Atque omnis a maiores perspiciatis non ipsa iure itaque praesentium, voluptate soluta.</p>
+            <img src="{% static 'images/ethereum.png'%}" alt="">
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tenetur odit qui itaque tempora neque ex quasi ipsa. Atque omnis a maiores perspiciatis non ipsa iure itaque praesentium, voluptate soluta.</p>
+            <img src="{% static 'images/uniswap-uni-icon.png'%}" alt="">
+          </div>
+          <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tenetur odit qui itaque tempora neque ex quasi ipsa. Atque omnis a maiores perspiciatis non ipsa iure itaque praesentium, voluptate soluta.</p>
+            <img src="{% static 'images/convert.png'%}" alt="">
+          </div>
+        </div>
+        <iframe src="https://app.uniswap.org/#/swap?exactField=input&exactAmount=1&inputCurrency=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" height="560px" width="40%" style="border: 0;"></iframe>
+        
+        <!-- Uniswap widget code -->
+      </section>
+      
+
+    <div class="divider" id="divider-tokenomics" style="box-shadow: rgba(255, 255, 255, 1) 0px 0px 0px 20px; outline: none;">
+        <hr style="border: none;">
+        <img src="{% static 'images/logo_pequeno.png' %}" alt="Logo" class="logo">
+      </div>
+
+      <section id="tokenomics" style="background-color: rgb(79, 152, 67); margin: 7%">
+        <h1>Tokenomics</h1>
+        <div class="container-tokenomics">
+          <div class="text-half">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsam maiores eius saepe est perspiciatis autem sequi, quis dolorem, esse veniam nihil aut at neque, architecto culpa odio delectus. Minima?</h2>
+            <h2 style="color: red; outline: 2px black;">NO FUCKING TAXES!</h2>
+        </div>
+          <div class="image-container">
+            <div id="pieChart" class="chart"></div>
+            
+          </div>
+        </div>
+      </section>
+
+    <div class="divider" id="divider-roadmap" style="box-shadow: rgba(255, 255, 255, 1) 0px 0px 0px 20px; outline: none;">
+        <hr style="border: none;">
+        <img src="{% static 'images/logo_pequeno.png' %}" alt="Logo" class="logo">
+      </div>
+
+    <section id="roadmap" style="background-color: rgb(79, 152, 67); margin: 7%; z-index: 0;">
+        <h1>RoadMap</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsam maiores eius saepe est perspiciatis autem sequi, quis dolorem, esse veniam nihil aut at neque, architecto culpa odio delectus. Minima?</h2>
+        <div class="process-wrapper" style="position: relative;
+        z-index: 0;">
+            <div id="progress-bar-container">
+                <ul>
+                    <li class="step step01 active"><div class="step-inner">1º Step</div></li>
+                    <li class="step step02"><div class="step-inner">2º Step</div></li>
+                    <li class="step step03"><div class="step-inner">3º Step</div></li>
+                   
+                    
+                </ul>
+                
+                <div id="line">
+                    <div id="line-progress"></div>
+                </div>
+            </div> 
+            
+            <div id="progress-content-section" >
+                <div class="section-content discovery active">
+                    <h2>HOME SECTION</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque justo, consequat non fermentum ac, tempor eu turpis. Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante consequat placerat ut sed eros. Nullam porttitor mattis mi, id fringilla ex consequat eu. Praesent pulvinar tincidunt leo et condimentum. Maecenas volutpat turpis at felis egestas malesuada. Phasellus sem odio, venenatis at ex a, lacinia suscipit orci.</p>
+                </div>
+                
+                <div class="section-content strategy">
+                    <h2>GALLERY SECTION</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque justo, consequat non fermentum ac, tempor eu turpis. Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante consequat placerat ut sed eros. Nullam porttitor mattis mi, id fringilla ex consequat eu. Praesent pulvinar tincidunt leo et condimentum. Maecenas volutpat turpis at felis egestas malesuada. Phasellus sem odio, venenatis at ex a, lacinia suscipit orci.</p>
+                </div>
+                
+                <div class="section-content creative">
+                    <h2>Creative CREATIONS</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque justo, consequat non fermentum ac, tempor eu turpis. Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante consequat placerat ut sed eros. Nullam porttitor mattis mi, id fringilla ex consequat eu. Praesent pulvinar tincidunt leo et condimentum. Maecenas volutpat turpis at felis egestas malesuada. Phasellus sem odio, venenatis at ex a, lacinia suscipit orci.</p>
+                </div>
+                
+                
+                
+                
+                </div>
+            </div>
+
+
+
+    </section>
+
+    <div class="divider" id="divider-contact" style="box-shadow: rgba(255, 255, 255, 1) 0px 0px 0px 20px; outline: none;">
+        <hr style="border: none;">
+        <img src="{% static 'images/logo_pequeno.png' %}" alt="Logo" class="logo">
+      </div>
+
+    <section id="contact" style="background-color: rgb(79, 152, 67); margin: 7%">
+        <h1>Contact</h1>
+        <div class="socials" style="display: flex; justify-content: center; align-items: center; " >
+            <ul>
+                <li>
+                  <a class="facebook" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="twitter" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="instagram" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i class="fa-brands fa-telegram"></i>
+                  </a>
+                </li>
+              </ul>
+        </div>
+        <h2 >$PEPELORE coin has no association with Matt Furie or his creation Pepe the Frog. This token is simply paying homage to a meme we all love and recognize.</h2>
+    </section>
+</body>
+<footer>
+    <div class="container">
+      <p style="color: rgb(255, 255, 255);">&copy; 2023 PEPE LORE. All rights reserved.</p>
+    </div>
+  </footer>
+<script>
+    
+
+
+// Get a reference to the navbar element
+const navbar = document.querySelector('nav');
+
+// Add an event listener for the scroll event on the window object
+window.addEventListener('scroll', () => {
+  // Check if the current scroll position is greater than 0
+  if (innerWidth > 1380){
+    if (window.scrollY > 0) {
+    // If the user has scrolled down, set the background color of the navbar to green
+    navbar.style.backgroundColor = 'rgb(50, 130, 40)';
+    console.log("scroled");
+  } else {
+    // If the user is at the top of the page, set the background color of the navbar to transparent
+    navbar.style.backgroundColor = 'transparent';
+  }
+  }
+  
+  
+});
+
+
+const section = document.querySelector('#index');
+
+// Adicione um ouvinte de evento para o evento de rolagem na janela
+window.addEventListener('scroll', () => {
+  // Verifique se a posição atual de rolagem é maior que 0
+  if (window.scrollY > 10) {
+    // Se o usuário rolou para baixo, remova a classe no-margin da seção
+    section.classList.remove('no-margin');
+  } else {
+    // Se o usuário estiver no topo da página, adicione a classe no-margin à seção
+    section.classList.add('no-margin');
+  }
+});
+
+$(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('#divider-about').offset().top - 100 }, 'fast');
+      return false;
+    });
+  });
+
+
+  $(function() {
+    $('#about-button').click (function() {
+      $('html, body').animate({scrollTop: $('#divider-about').offset().top - 100 }, 'fast');
+      return false;
+    });
+  });
+
+  $(function() {
+    $('#howtobuy-button').click (function() {
+      $('html, body').animate({scrollTop: $('#divider-howtobuy').offset().top - 100 }, 'fast');
+      return false;
+    });
+  });
+
+  $(function() {
+    $('#tokenomics-button').click (function() {
+      $('html, body').animate({scrollTop: $('#divider-tokenomics').offset().top - 100 }, 'fast');
+      return false;
+    });
+  });
+
+  $(function() {
+    $('#roadmap-button').click (function() {
+      $('html, body').animate({scrollTop: $('#divider-roadmap').offset().top - 100 }, 'fast');
+      return false;
+    });
+  });
+
+
+   // Get the play button element
+const playButton = document.getElementById('play');
+
+// Get the audio element
+const audio = document.getElementById('myAudio');
+
+// Add a click event listener to the play button
+playButton.addEventListener('click', () => {
+  if (audio.paused) {
+    // Play the audio
+    audio.play();
+    playButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M533.6 32.5C598.5 85.3 640 165.8 640 256s-41.5 170.8-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"/></svg>';
+
+  } else {
+    // Pause the audio
+    audio.pause();   
+    playButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>';
+
+  }
+});
+
+// Get the text container element
+const textContainer = document.querySelector('.text-container');
+
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to handle the scroll event
+function handleScroll() {
+  if (window.innerWidth > 1380) {
+    if (isInViewport(textContainer)) {
+      textContainer.classList.add('visible');
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+  textContainer.classList.add('visible');
+}
+
+// Add the scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+
+
+
+$(function(){
+  $("#pieChart").drawPieChart([
+    { title: "CEX Listings",         value : 6.9,  color: "#02B3E7" },
+    { title: "Liquidity", value:  93.1,   color: "rgb(79,152,67)" },
+   
+  ]);
+});
+
+
+;(function($, undefined) {
+  $.fn.drawPieChart = function(data, options) {
+    var $this = this,
+      W = $this.width(),
+      H = $this.height(),
+      centerX = W/2,
+      centerY = H/2,
+      cos = Math.cos,
+      sin = Math.sin,
+      PI = Math.PI,
+      settings = $.extend({
+        segmentShowStroke : true,
+        segmentStrokeColor : "#fff",
+        segmentStrokeWidth : 1,
+        baseColor: "#fff",
+        baseOffset: 15,
+        edgeOffset: 30,//offset from edge of $this
+        pieSegmentGroupClass: "pieSegmentGroup",
+        pieSegmentClass: "pieSegment",
+        lightPiesOffset: 12,//lighten pie's width
+        lightPiesOpacity: .3,//lighten pie's default opacity
+        lightPieClass: "lightPie",
+        animation : true,
+        animationSteps : 90,
+        animationEasing : "easeInOutExpo",
+        tipOffsetX: -15,
+        tipOffsetY: -45,
+        tipClass: "pieTip",
+        beforeDraw: function(){  },
+        afterDrawed : function(){  },
+        onPieMouseenter : function(e,data){  },
+        onPieMouseleave : function(e,data){  },
+        onPieClick : function(e,data){  }
+      }, options),
+      animationOptions = {
+        linear : function (t){
+          return t;
+        },
+        easeInOutExpo: function (t) {
+          var v = t<.5 ? 8*t*t*t*t : 1-8*(--t)*t*t*t;
+          return (v>1) ? 1 : v;
+        }
+      },
+      requestAnimFrame = function(){
+        return window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.oRequestAnimationFrame ||
+          window.msRequestAnimationFrame ||
+          function(callback) {
+            window.setTimeout(callback, 1000 / 60);
+          };
+      }();
+
+    var $wrapper = $('<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>').appendTo($this);
+    var $groups = [],
+        $pies = [],
+        $lightPies = [],
+        easingFunction = animationOptions[settings.animationEasing],
+        pieRadius = Min([H/2,W/2]) - settings.edgeOffset,
+        segmentTotal = 0;
+
+    //Draw base circle
+    var drawBasePie = function(){
+      var base = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      var $base = $(base).appendTo($wrapper);
+      base.setAttribute("cx", centerX);
+      base.setAttribute("cy", centerY);
+      base.setAttribute("r", pieRadius+settings.baseOffset);
+      base.setAttribute("fill", settings.baseColor);
+    }();
+
+    //Set up pie segments wrapper
+    var pathGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    var $pathGroup = $(pathGroup).appendTo($wrapper);
+    $pathGroup[0].setAttribute("opacity",0);
+
+    //Set up tooltip
+    var $tip = $('<div class="' + settings.tipClass + '" />').appendTo('body').hide(),
+      tipW = $tip.width(),
+      tipH = $tip.height();
+
+    for (var i = 0, len = data.length; i < len; i++){
+      segmentTotal += data[i].value;
+      var g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      g.setAttribute("data-order", i);
+      g.setAttribute("class", settings.pieSegmentGroupClass);
+      $groups[i] = $(g).appendTo($pathGroup);
+      $groups[i]
+        .on("mouseenter", pathMouseEnter)
+        .on("mouseleave", pathMouseLeave)
+        .on("mousemove", pathMouseMove)
+        .on("click", pathClick);
+
+      var p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      p.setAttribute("stroke-width", settings.segmentStrokeWidth);
+      p.setAttribute("stroke", settings.segmentStrokeColor);
+      p.setAttribute("stroke-miterlimit", 2);
+      p.setAttribute("fill", data[i].color);
+      p.setAttribute("class", settings.pieSegmentClass);
+      $pies[i] = $(p).appendTo($groups[i]);
+
+      var lp = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      lp.setAttribute("stroke-width", settings.segmentStrokeWidth);
+      lp.setAttribute("stroke", settings.segmentStrokeColor);
+      lp.setAttribute("stroke-miterlimit", 2);
+      lp.setAttribute("fill", data[i].color);
+      lp.setAttribute("opacity", settings.lightPiesOpacity);
+      lp.setAttribute("class", settings.lightPieClass);
+      $lightPies[i] = $(lp).appendTo($groups[i]);
+    }
+
+    settings.beforeDraw.call($this);
+    //Animation start
+    triggerAnimation();
+
+    function pathMouseEnter(e){
+      var index = $(this).data().order;
+      $tip.text(data[index].title + ": " + data[index].value + "%").fadeIn(200);
+      if ($groups[index][0].getAttribute("data-active") !== "active"){
+        $lightPies[index].animate({opacity: .8}, 180);
+      }
+      settings.onPieMouseenter.apply($(this),[e,data]);
+    }
+    function pathMouseLeave(e){
+      var index = $(this).data().order;
+      $tip.hide();
+      if ($groups[index][0].getAttribute("data-active") !== "active"){
+        $lightPies[index].animate({opacity: settings.lightPiesOpacity}, 100);
+      }
+      settings.onPieMouseleave.apply($(this),[e,data]);
+    }
+    function pathMouseMove(e){
+      $tip.css({
+        top: e.pageY + settings.tipOffsetY,
+        left: e.pageX - $tip.width() / 2 + settings.tipOffsetX
+      });
+    }
+    function pathClick(e){
+      var index = $(this).data().order;
+      var targetGroup = $groups[index][0];
+      for (var i = 0, len = data.length; i < len; i++){
+        if (i === index) continue;
+        $groups[i][0].setAttribute("data-active","");
+        $lightPies[i].css({opacity: settings.lightPiesOpacity});
+      }
+      if (targetGroup.getAttribute("data-active") === "active"){
+        targetGroup.setAttribute("data-active","");
+        $lightPies[index].css({opacity: .8});
+      } else {
+        targetGroup.setAttribute("data-active","active");
+        $lightPies[index].css({opacity: 1});
+      }
+      settings.onPieClick.apply($(this),[e,data]);
+    }
+    function drawPieSegments (animationDecimal){
+      var startRadius = -PI/2,//-90 degree
+          rotateAnimation = 1;
+      if (settings.animation) {
+        rotateAnimation = animationDecimal;//count up between0~1
+      }
+
+      $pathGroup[0].setAttribute("opacity",animationDecimal);
+
+      //draw each path
+      for (var i = 0, len = data.length; i < len; i++){
+        var segmentAngle = rotateAnimation * ((data[i].value/segmentTotal) * (PI*2)),//start radian
+            endRadius = startRadius + segmentAngle,
+            largeArc = ((endRadius - startRadius) % (PI * 2)) > PI ? 1 : 0,
+            startX = centerX + cos(startRadius) * pieRadius,
+            startY = centerY + sin(startRadius) * pieRadius,
+            endX = centerX + cos(endRadius) * pieRadius,
+            endY = centerY + sin(endRadius) * pieRadius,
+            startX2 = centerX + cos(startRadius) * (pieRadius + settings.lightPiesOffset),
+            startY2 = centerY + sin(startRadius) * (pieRadius + settings.lightPiesOffset),
+            endX2 = centerX + cos(endRadius) * (pieRadius + settings.lightPiesOffset),
+            endY2 = centerY + sin(endRadius) * (pieRadius + settings.lightPiesOffset);
+        var cmd = [
+          'M', startX, startY,//Move pointer
+          'A', pieRadius, pieRadius, 0, largeArc, 1, endX, endY,//Draw outer arc path
+          'L', centerX, centerY,//Draw line to the center.
+          'Z'//Cloth path
+        ];
+        var cmd2 = [
+          'M', startX2, startY2,
+          'A', pieRadius + settings.lightPiesOffset, pieRadius + settings.lightPiesOffset, 0, largeArc, 1, endX2, endY2,//Draw outer arc path
+          'L', centerX, centerY,
+          'Z'
+        ];
+        $pies[i][0].setAttribute("d",cmd.join(' '));
+        $lightPies[i][0].setAttribute("d", cmd2.join(' '));
+        startRadius += segmentAngle;
+      }
+    }
+
+    var animFrameAmount = (settings.animation)? 1/settings.animationSteps : 1,//if settings.animationSteps is 10, animFrameAmount is 0.1
+        animCount =(settings.animation)? 0 : 1;
+    function triggerAnimation(){
+      if (settings.animation) {
+        requestAnimFrame(animationLoop);
+      } else {
+        drawPieSegments(1);
+      }
+    }
+    function animationLoop(){
+      animCount += animFrameAmount;//animCount start from 0, after "settings.animationSteps"-times executed, animCount reaches 1.
+      drawPieSegments(easingFunction(animCount));
+      if (animCount < 1){
+        requestAnimFrame(arguments.callee);
+      } else {
+        settings.afterDrawed.call($this);
+      }
+    }
+    function Max(arr){
+      return Math.max.apply(null, arr);
+    }
+    function Min(arr){
+      return Math.min.apply(null, arr);
+    }
+    return $this;
+  };
+})(jQuery);
+
+$(".step").click( function() {
+	$(this).addClass("active").prevAll().addClass("active");
+	$(this).nextAll().removeClass("active");
+});
+
+$(".step01").click( function() {
+	$("#line-progress").css("width", "25%");
+	$(".discovery").addClass("active").siblings().removeClass("active");
+});
+
+$(".step02").click( function() {
+	$("#line-progress").css("width", "50%");
+	$(".strategy").addClass("active").siblings().removeClass("active");
+});
+
+$(".step03").click( function() {
+	$("#line-progress").css("width", "75%");
+	$(".creative").addClass("active").siblings().removeClass("active");
+});
+
+
+
+window.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const checkbox = document.getElementById("check");
+    const navItems = document.getElementsByClassName("hm-nav-item")
+   
+
+    function closeMenu() {
+      checkbox.checked = false;
+    }
+
+    for (let i = 0; i < navItems.length; i++) {
+      navItems[i].addEventListener('click', closeMenu);
+    }
+  });
+
+
+</script>
+
+</html>
